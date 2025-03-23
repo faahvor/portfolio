@@ -1,36 +1,29 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@font-face {
-  font-family: 'TR Avalon';
-  src: url('./fonts/tr-avalon-plain.ttf') format('truetype');
-  font-weight: normal;
+:root {
+  --font-space: "Space Grotesk", sans-serif; /* Regular and bold (700) are available */
+  --font-acme: "Acme", sans-serif; /* Acme only has one weight */
 }
-
-
-@font-face {
-  font-family: 'TR Avalon';
-  src: url('./fonts/tr-avalon-bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'TR Avalon', sans-serif;
+  font-family: "Acme", "Space Grotesk";
 }
-
 
 body {
   margin: 0;
-  font-family: 'TR Avalon', sans-serif;
+  font-family: "Acme", "Space Grotesk";
   background-color: #111318;
   color: #fff;
 }
-
+.text {
+  font-family: 'Space Grotesk', 'Acme', sans-serif;
+  font-weight: 700; /* Normal */
+}
 
 /* underline effect on menu items */
 
@@ -40,13 +33,13 @@ body {
 }
 
 .underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
   width: 100%;
   height: 1px;
-  background-color: #5C87F6;
+  background-color: #a645a9;
   transform: scaleX(0);
   transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
   transform-origin: bottom right;
@@ -55,11 +48,11 @@ body {
 .underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  background-color: #5C87F6; 
+  background-color: #a645a9;
 }
 
 .hover-menu:hover {
-  color: #5C87F6 !important;
+  color: #a645a9 !important;
 }
 
 /* loading screen */
@@ -99,7 +92,7 @@ body {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background: rgb(92, 135, 246);
+  background: a645a9;
   animation: loading-bounce 0.5s ease-in-out infinite alternate;
 }
 
@@ -111,9 +104,7 @@ body {
   height: 3.5px;
   width: 22.5px;
   border-radius: 4px;
-  box-shadow: 0 2.5px 0 #bbbbbb,
-              -17.5px 25px 0 #bbbbbb,
-              -35px 47.5px 0 #bbbbbb;
+  box-shadow: 0 2.5px 0 #bbbbbb, -17.5px 25px 0 #bbbbbb, -35px 47.5px 0 #bbbbbb;
   animation: loading-step 1s ease-in-out infinite;
 }
 
@@ -134,19 +125,14 @@ body {
 
 @keyframes loading-step {
   0% {
-    box-shadow: 0 5px 0 rgba(0, 0, 0, 0),
-                0 5px 0 #bbbbbb,
-                -17.5px 25px 0 #bbbbbb,
-                -35px 47.5px 0 #bbbbbb;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0), 0 5px 0 #bbbbbb,
+      -17.5px 25px 0 #bbbbbb, -35px 47.5px 0 #bbbbbb;
   }
   100% {
-    box-shadow: 0 5px 0 #bbbbbb,
-                -17.5px 25px 0 #bbbbbb,
-                -35px 47.5px 0 #bbbbbb,
-                -35px 47.5px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 0 #bbbbbb, -17.5px 25px 0 #bbbbbb, -35px 47.5px 0 #bbbbbb,
+      -35px 47.5px 0 rgba(0, 0, 0, 0);
   }
 }
-
 
 /* scrolling spotify thingy */
 
@@ -156,31 +142,31 @@ body {
   display: flex;
 }
 
-.scrolling-text>p {
+.scrolling-text > p {
   display: inline-block;
   padding-left: 15%;
   animation: scroll-text 20s linear infinite;
 }
 
 @media (min-width: 768px) {
-  .scrolling-text>p {
-      padding-left: 40%;
+  .scrolling-text > p {
+    padding-left: 40%;
   }
 }
 
 @media (min-width: 768px) {
-  .scrolling-text>p {
-      animation: scroll-text 30s linear infinite;
+  .scrolling-text > p {
+    animation: scroll-text 30s linear infinite;
   }
 }
 
 @keyframes scroll-text {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 

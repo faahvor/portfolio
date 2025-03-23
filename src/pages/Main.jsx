@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { Link } from "react-router-dom";
 import avi from "../assets/img/avi.jpg";
@@ -33,9 +34,9 @@ const Main = () => {
             fill="currentColor"
             strokeWidth="0"
             viewBox="0 0 256 256"
-            color="#60A5FA"
+            color="#a645a9"
             style={{
-              color: "#60A5FA",
+              color: "#a645a9",
               verticalAlign: "middle",
               display: "inline-block",
             }}
@@ -52,10 +53,10 @@ const Main = () => {
         style={{ color: "rgb(137, 148, 174)" }}
         className="mx-[13vw] md:mx-[32vw] mt-2 md:mt-3 text-[0.85rem] md:text-sm font-medium md:font-medium leading-[1.9] md:leading-relaxed"
       >
-        I&apos;m a curiosity-driven full-stack software developer who&apos;s
-        secretly more in love with the Frontend than I let on. Picture me as a
-        slightly Obsessed coder, navigating the wild world of tech and juggling
-        it all; yet somehow still making it work!
+        I&apos;m a full-stack builder who makes software and websites, totally
+        hooked on frontend vibes.Think of me as a digital DJ, mixing killer
+        layouts with solid code. I’m always tweaking pixels and chasing that
+        perfect user vibe like it’s a treasure hunt!"
       </h2>
       <div className="md:flex items-center grid-row-1 md:gap-5">
         <div>
@@ -64,7 +65,7 @@ const Main = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="flex gap-2 mt-5 px-5 pt-4 pb-5 font-semibold md:font-medium text-[0.85rem] bg-[#15181e] text-[#5C87F6] hover:text-[#5C87F6] md:text-sm border-[1px] border-[#20242d] hover:border-[#5C87F6]/50 transition duration-[3s] ease-in-out">
+            <button className="flex gap-2 mt-5 px-5 pt-4 pb-5 font-semibold md:font-medium text-[0.85rem] bg-[#15181e] text-[#a645a9] hover:text-[#943eb4] md:text-sm border-[1px] border-[#20242d] hover:border-[#5C87F6]/50 transition duration-[3s] ease-in-out">
               Download Resume{" "}
               <img
                 className="w-4 h-4 md:w-5 md:h-5"
@@ -77,7 +78,7 @@ const Main = () => {
         <div className="hidden md:block">
           <Link
             to={"/contact"}
-            className="flex gap-2 mt-5 px-5 pt-4 pb-5 font-semibold md:font-medium text-xs md:text-sm bg-transparent text-[#8994AE] hover:text-[#5C87F6] transition duration-[2s] ease-in-out"
+            className="flex gap-2 mt-5 px-5 pt-4 pb-5 font-semibold md:font-medium text-xs md:text-sm bg-transparent text-[#8994AE] hover:text-[#b650b0] transition duration-[2s] ease-in-out"
           >
             Get In Touch
           </Link>
@@ -86,10 +87,16 @@ const Main = () => {
 
       <div className="fixed bottom-5 right-8 mb-2 mr-2 md:mb-5 md:mr-5 text-xs md:text-[10px] font-medium text-[#E2EAFD] z-[100] hidden md:block text-right">
         <a
-            href="https://thesegunonakoya.me"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Built with code, caffeine,<br />and a healthy dose of<br />imposter syndrome</a>
+          href="https://thesegunonakoya.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Built with code, caffeine,
+          <br />
+          and a healthy dose of
+          <br />
+          Obsession
+        </a>
       </div>
     </main>
   );
